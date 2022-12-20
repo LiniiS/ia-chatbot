@@ -1,0 +1,79 @@
+{
+    "intents":[
+        {
+            "tag":"greeting",
+            "patterns":["Hi there", "How are you", "Hello", "Is anyone there", "Hiho", "Good day", "Hey", "Hi"],
+            "responses":["Hello!", "Hi, how can I help?", "Good day, how can I help?", "Hello, how can I help?"]
+        },
+        {
+            "tag":"goodbye",
+            "patterns":["Bye", "See you later", "Good bye", "Cya", "Bye bye", "Ok bye"],
+            "responses":["See you!", "Have a nice day", "Sure Bye", "Later!", "Hasta la vista!"]
+        },
+        {
+            "tag":"thanks",
+            "patterns":["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+            "responses":["Happy to help!", "Any time!", "My pleasure", "You are welcome"]
+        },
+        {
+            "tag":"no_answer",
+            "patterns":[""],
+            "responses":["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+        },
+        {
+            "tag":"dont_work",
+            "patterns":["Construction", "remodeling", "build", "new structure", "create new room"],
+            "responses":["Sorry, I can only help you with home decoration: bedroom decorations. Ask me about colors and/or bedroom."]
+        },
+        {
+            "tag":"name",
+            "patterns":["your name", "what is your name", "Tell me your name", "who are you", "tell me about yourself"],
+            "responses":["I am DecoraBot", "My name is DecoraBot", "DecoraBot is my name, and I'm a specialist in decoration"]
+        },
+        {
+            "tag":"options",
+            "patterns":["What do you do","How can you help","What is your purpose", "What can you offer", "What can you do"],
+            "responses":["I can tell you about house decoration", "I'm house decoration specialist", "I can help you to decide about house decorations","I can give you interesting colors combination for your house decoration"]
+        },
+        {
+            "tag":"colors",
+            "patterns":["Colors", "What do you know about colors", "Tell me more about colors", "What kind of colors do you know"],
+            "responses":["I can tell you more about colors combination: warm or cool", "I can give you info about warm or cool colors combination"]
+        },
+        {
+            "tag":"warm_combination",
+            "patterns":["Warm", "Warm combination", "What are the best warm combination?"],
+            "responses":["I'd suggest: Congo Pink, Apricot, Medium Champagne", "I'd suggest: Dark Red, Rosso Corsa, Vermilion", "I'd suggest: Xiketic, Dark Sienna, Rosewood", "Persimmon, Tangerine, Orange Web"]
+        },
+        {
+            "tag":"cool_combination",
+            "patterns":["Cool", "Cool colors", "Cool colors combination", "What are the best cool colors combination?"],
+            "responses":["I'd suggest: Midnight Blue, Dark Cornflower Blue, Star Command Blue", "I'd suggest: Midnight Green Eagle Green, Ming, Metallic Seaweed", "I'd suggest: Viridian Green, Maximum Blue Green, Pacific Blue", "Cyan Process, Blue Green, Celadon Blue"]
+        },
+        {
+            "tag":"rooms_decoration",
+            "patterns":["Room decoration", "House decoration", "I would like to decorate my house", "Do you have any tips for house decoration?", "Flourish", "Embelishment", "Feature", "Garniture", "Beautifier", "Beauty", "Ornamentation", "Enhancements", "Enrichments", "Flounce"],
+            "responses":["Which room would you like to decorate?","Which room would you like to flourish?", "Which room are you planning to decorate?"]
+        },
+        {
+            "tag":"deco_styles_bedroom",
+            "patterns":["Bedroom", "I would like to decorate a bedroom", "Chamber", "bedchamber", "bunk room", "guest room", "cubicle", "dorm", "sleeping pad", "sleeping chamber", "dormitory", "sleeping quarter"],
+            "responses":["I can tell you more about minimalist decorations for your bedroom", "I can show you some examples for your bedroom", "Do you prefer a warm or cold color combination?"]
+        },
+        {
+            "tag":"deco_info_minimalist",
+            "patterns":["I would like to know about minimalist design", "Minimalist designs for bedroom"],
+            "responses":["Minimalism is about stripping back the unnecessary, leaving only the things that provide you with real value and joy","Minimalism is about avoiding the unnecessary , it's about simplicity, utility and elegance"," It's all about “LESS IS MORE” in terms of embracing the most of fewer things.","Minimalist interior design embraces clean lines, neutral colors, natural lighting, and functional furniture."]
+        },
+        {
+            "tag":"deco_examples_bedroom_minimalist",
+            "patterns":["Show me examples", "Examples", "Samples", "Illustration","Cases", "Ideas", "Models", "Representation"],
+            "responses":["'<img src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/edc040120wasco-003-1582662230.jpg' alt='minimalistic bedroom' width='300' height='200'>'"]
+        },
+        {
+            "tag":"winter_colors_info",
+            "patterns":["What do you know about winter colors", "Winter colors combination", "Winter colors for rooms", "Winter palette", "Cozy winter colors"],
+            "responses":["Rose plus Taupe", "Grey with Pink", "Light Green with Dark Brown and Whites","Deep Red with Cream and Grey Tones","Black and White"]
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>DecoraBOT</title>
+</head>
+
+<body>
+    <section class="container ">
+        <div class="container bg-light chatbox">
+            <div class="title mt-5 mb-5  p-2">
+                <div class="mt-2"><img src="https://img.icons8.com/nolan/64/bot.png" /></div>
+                <h1 class="title mt-3 special_title">DecoraBOT</h1>
+                <small class="lead">IA de decoração de ambientes </small>
+            </div>
+            
+            <br>
+            <div class="row container">
+                <div class="col-lg-9">
+                    <input class="form-control" type="text" name="question" id="question">
+                </div>
+                <div class="col-lg-3">
+                    <button class="special__button" id="submit-button">Ask!</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p id="response"></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="/static/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        jQuery(document).ready(function () {
+
+            $("#submit-button").click(function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/chatbot",
+                    data: {
+                        question: $("#question").val()
+                    },
+                    success: function (result) {
+                        $("#response").append("<br>Me: " + $("#question").val() + "<br> Deco: " + result.response);
+                        $("#question").val("").focus().select()
+                    },
+                    error: function (result) {
+                        alert('error');
+                    }
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
